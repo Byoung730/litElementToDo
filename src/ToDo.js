@@ -1,18 +1,29 @@
-import {LitElement, html} from '@polymer/lit-element/lit-element.js';
-import {repeat} from 'lit-html/directives/repeat.js';
-import {style} from './ToDo-styles.js';
+import {
+  LitElement,
+  html
+} from '@polymer/lit-element/lit-element.js';
+import {
+  repeat
+} from 'lit-html/directives/repeat.js';
+import {
+  style
+} from './ToDo-styles.js';
 import './components/ToDoItem.js';
 // import Logo from './assets/logo.png';
 
 export class ToDo extends LitElement {
   /**
-  * Declare the properties that will be
-  * available in the binding system
-  */
+   * Declare the properties that will be
+   * available in the binding system
+   */
   static get properties() {
     return {
-      list: {type: Array},
-      todo: {type: String},
+      list: {
+        type: Array
+      },
+      todo: {
+        type: String
+      },
     };
   }
   constructor() {
@@ -28,7 +39,9 @@ export class ToDo extends LitElement {
   }
 
   todoItem(todo) {
-    return {todo}
+    return {
+      todo
+    }
   }
 
   createNewToDoItem() {
@@ -55,16 +68,16 @@ export class ToDo extends LitElement {
 
   // this is now being emitted back to the parent from the child component
   deleteItem(indexToDelete) {
-    this.list = this.list.filter((toDo, index) => index !== indexToDelete);
+    this.list = this.list.filter((toDo, index) => index !== indexToDelete);
   }
 
 
   render() {
-    return html`
+    return html `
     ${style}
     <div class="ToDo">
       <h1>LitElement</h1>
-      <h1 class="ToDo-Header">LitElement To Do</h1>
+      <h1 class="ToDo-Header">Lit-Element To Do</h1>
       <div class="ToDo-Container">
 
         <div class="ToDo-Content">
