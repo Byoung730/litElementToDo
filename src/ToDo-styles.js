@@ -1,6 +1,8 @@
-import {html} from '@polymer/lit-element/lit-element.js';
+import {
+  html
+} from '@polymer/lit-element/lit-element.js';
 
-export const style = html`
+export const style = html `
   <style>
     .Logo {
       width: 50px;
